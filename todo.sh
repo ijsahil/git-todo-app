@@ -1,5 +1,10 @@
 #!/bin/bash
-# A simple to-do list script
-echo "Todo List Manager"
-echo "Usage: ./todo.sh add 'your task'"
-echo "       ./todo.sh list"
+
+if [ "$1" == "add" ]; then
+  echo "$2" >> tasks.txt
+  echo "Added task: '$2'"
+else
+  echo "Todo List Manager"
+  echo "Usage: ./todo.sh add 'your task'"
+  echo "       ./todo.sh list"
+fi
